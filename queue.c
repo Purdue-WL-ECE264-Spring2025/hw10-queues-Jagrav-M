@@ -2,6 +2,9 @@
 #include "tile_game.h"
 #include <stdlib.h>
 
+int is_goal(struct game_state state);
+int possible_moves(struct game_state state, struct game_state neighbors[4]);
+
 void enqueue(struct queue *q, struct game_state state) 
 {
     size_t encoded = serialize(state);
